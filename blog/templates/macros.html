@@ -9,7 +9,8 @@
     </div>
     <div class="col-md-10">
         <h1>
-            {{ post.title }}
+          {% set id = post.id - 1 %}
+          <a href="{{ url_for('post', id=id ) }}">{{ post.title }}</a> 
         </h1>
         {{ post.content | safe }}
     </div>
